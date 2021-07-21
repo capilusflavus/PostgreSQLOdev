@@ -91,9 +91,36 @@ SELECT title,length,rental_rate FROM film WHERE (title LIKE 'C%') AND (length>90
 ~~~
 
 ## <p id = 'Ödev 4' > Ödev 4 </p> 
+
 #### Film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
 ~~~sql
+SELECT DISTINCT replacement_cost FROM film;
+~~~
 
+#### Film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır?
+~~~sql
+SELECT COUNT (DISTINCT replacement_cost) FROM film;
+~~~
+
+#### Film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+~~~sql
+SELECT COUNT (*) FROM film WHERE (title LIKE 'T%') AND (rating='G');
+~~~
+
+#### Country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+~~~sql
+SELECT COUNT (country) FROM country WHERE country LIKE ('_____');
+~~~
+
+#### City tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+~~~sql
+SELECT COUNT (*) FROM city WHERE city ILIKE ('%r');
+~~~
+
+
+## <p id = 'Ödev 5' > Ödev 5 </p> 
+#### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+~~~sql
 
 
 
