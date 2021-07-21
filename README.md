@@ -72,22 +72,26 @@ WHERE (rental_rate IN (0.99,2.99,4.99)) AND (replacement_cost IN (12.99,15.99,28
 
 #### Country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
 ~~~sql
-SELECT country FROM country HERE country ~~ 'A%a';
+SELECT country FROM country 
+HERE country ~~ 'A%a';
 ~~~
 
 #### Country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
 ~~~sql
-SELECT country FROM country WHERE country ~~ '_____%n';
+SELECT country FROM country 
+WHERE country ~~ '_____%n';
 ~~~
 
 #### Film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren
 ~~~sql
-SELECT title FROM film WHERE title ILIKE '%t%t%t%t%';
+SELECT title FROM film 
+WHERE title ILIKE '%t%t%t%t%';
 ~~~
 
 #### Film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99 olan verileri sıralayınız.
 ~~~sql
-SELECT title,length,rental_rate FROM film WHERE (title LIKE 'C%') AND (length>90) AND (rental_rate=2.99);
+SELECT title,length,rental_rate FROM film 
+WHERE (title LIKE 'C%') AND (length>90) AND (rental_rate=2.99);
 ~~~
 
 ## <p id = 'Ödev 4' > Ödev 4 </p> 
@@ -104,24 +108,47 @@ SELECT COUNT (DISTINCT replacement_cost) FROM film;
 
 #### Film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
 ~~~sql
-SELECT COUNT (*) FROM film WHERE (title LIKE 'T%') AND (rating='G');
+SELECT COUNT (*) FROM film 
+WHERE (title LIKE 'T%') AND (rating='G');
 ~~~
 
 #### Country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
 ~~~sql
-SELECT COUNT (country) FROM country WHERE country LIKE ('_____');
+SELECT COUNT (country) FROM country 
+WHERE country LIKE ('_____');
 ~~~
 
 #### City tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
 ~~~sql
-SELECT COUNT (*) FROM city WHERE city ILIKE ('%r');
+SELECT COUNT (*) FROM city 
+WHERE city ILIKE ('%r');
 ~~~
 
 
 ## <p id = 'Ödev 5' > Ödev 5 </p> 
 #### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
 ~~~sql
+SELECT * FROM film  
+WHERE title LIKE '%n' 
+ORDER BY length DESC 
+LIMIT 5;
+~~~
 
+#### Film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+~~~sql
+SELECT * FROM film 
+WHERE title LIKE '%n'
+ORDER BY length 
+OFFSET 5
+LIMIT 5;
+~~~
+
+#### Customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+~~~sql
+SELECT * FROM customer
+WHERE store_id=1
+ORDER BY last_name DESC
+LIMIT 4;
 
 
 
