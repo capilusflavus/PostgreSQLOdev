@@ -25,6 +25,5 @@
 ~~~sql
 SELECT title,description FROM film;
 ~~~sql
-SELECT title,length from film
-WHERE length>60 and length<75
+SELECT title,length from film WHERE length>60 and length<75;
 ~~~
