@@ -74,7 +74,7 @@ SELECT country FROM country HERE country ~~ 'A%a';
 ~~~
 #### Country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
 ~~~sql
-
+SELECT country FROM country WHERE country ~~ '_____n';
 
 
 
