@@ -24,6 +24,9 @@
 #### Film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
 ~~~sql
 SELECT title,description FROM film;
+~~~
+
+#### Film tablosunda bulunan tüm sütunlardaki verileri film uzunluğu (length) 60 dan büyük VE 75 ten küçük olma koşullarıyla sıralayınız.
 ~~~sql
 SELECT title,length from film WHERE length>60 and length<75;
 ~~~
