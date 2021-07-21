@@ -4,15 +4,11 @@
 <a href='#Ödev 3'>Ödev 3</a><br>
 <a href='#Ödev 4'>Ödev 4</a><br>
 <a href='#Ödev 5'>Ödev 5</a><br>
-
-
-
-
-
-
-
-
-
+<a href='#Ödev 6'>Ödev 6</a><br>
+<a href='#Ödev 7'>Ödev 7</a><br>
+<a href='#Ödev 8'>Ödev 8</a><br>
+<a href='#Ödev 9'>Ödev 9</a><br>
+<a href='#Ödev 10'>Ödev 10</a><br>
 
 
 
@@ -149,7 +145,15 @@ SELECT * FROM customer
 WHERE store_id=1
 ORDER BY last_name DESC
 LIMIT 4;
+~~~
 
+## <p id = 'Ödev 6' > Ödev 6 </p> 
+#### Film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+~~~sql
+SELECT ROUND(AVG(rental_rate),3) FROM film;
+~~~
+#### Film tablosunda bulunan filmlerden kaçtanesi 'C' karekteri ile başlar?
+~~~sql
 
 
 
