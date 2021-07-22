@@ -168,10 +168,8 @@ WHERE title LIKE ('C%');
 
 #### Örnek 3 : Film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
 ~~~sql
-SELECT * FROM film
-Where rental_rate=0.99
-ORDER BY length DESC
-LIMIT 1;
+SELECT MAX (length) FROM film
+Where rental_rate=0.99;
 ~~~
 
 #### Örnek 4 : Film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
@@ -184,10 +182,37 @@ WHERE  length>150;
 
 #### Örnek 1 : Film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.
 ~~~sql
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating;
+~~~
 
+#### Film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.
+~~~sql
+SELECT replacement_cost, COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*)>50;
+~~~
 
+#### Customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir?
+~~~sql
+SELECT store_id,COUNT(*) FROM customer
+GROUP BY store_id ;
+~~~
 
+#### City tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylaşınız.
+~~~sql
+SELECT country_id, COUNT(*) FROM city
+GROUP BY country_id
+ORDER BY COUNT(*) DESC
+LIMIT 1;
 
+country_id = 44 , count = 60
+~~~
+
+## <p id = 'Ödev 8' > Ödev 8 </p>
+
+#### Test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+~~~sql
 
 
 
