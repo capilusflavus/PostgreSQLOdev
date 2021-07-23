@@ -332,10 +332,26 @@ RETURNING * ;
 #### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
 ~~~sql
 
+SELECT city,country FROM city
+INNER JOIN country ON city.city_id=country.country_id;
+~~~
 
+#### Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+SELECT payment_id, first_name,last_name FROM payment
+INNER JOIN customer ON payment.customer_id=customer.customer_id;
+~~~
 
+#### Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+SELECT rental_id , first_name,last_name FROM rental
+INNER JOIN customer ON rental.customer_id=customer.customer_id;
+~~~
 
+##  <p id = 'Ödev 10' > Ödev 10 </p> 
 
+#### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
+~~~sql
 
 
 
