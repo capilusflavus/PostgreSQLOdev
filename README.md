@@ -307,6 +307,34 @@ RETURNING * ;
 #### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 ~~~sql
 
+DELETE FROM newtablo
+WHERE id>50;
+
+DELETE FROM newtablo
+WHERE name LIKE 'A%'
+RETURNING * ;
+
+DELETE FROM newtablo
+WHERE birthday='2000-08-01'
+RETURNING * ;
+
+DELETE FROM newtablo
+WHERE email='rcortnay1@gizmodo.com'
+RETURNING * ;
+
+DELETE FROM newtablo
+WHERE id=12
+RETURNING * ;
+~~~
+
+## <p id = 'Ödev 9' > Ödev 9 </p> 
+
+#### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+~~~sql
+
+
+
+
 
 
 
