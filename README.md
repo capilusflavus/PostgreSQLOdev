@@ -214,9 +214,98 @@ country_id = 44 , count = 60
 #### Test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 ~~~sql
 
+CREATE TABLE newtablo(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(100),
+  birthday DATE
+  );
+~~~
 
 
+#### Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+~~~sql
+insert into newtablo (name, email, birthday) values ('Lorenza', null, '1956-09-23');
+insert into newtablo (name, email, birthday) values ('Daisi', 'dmcaviy1@wikimedia.org', '1965-12-26');
+insert into newtablo (name, email, birthday) values ('Gerry', 'golynn2@archive.org', null);
+insert into newtablo (name, email, birthday) values ('Kleon', 'klongforth3@vinaora.com', '1998-04-08');
+insert into newtablo (name, email, birthday) values ('Karney', 'kborsi4@ft.com', '1961-08-15');
+insert into newtablo (name, email, birthday) values ('Meade', 'mbowyer5@ifeng.com', '1950-04-07');
+insert into newtablo (name, email, birthday) values ('Reinald', 'rkeenlyside6@amazonaws.com', '1951-01-02');
+insert into newtablo (name, email, birthday) values ('Darb', null, '1904-05-16');
+insert into newtablo (name, email, birthday) values ('Yetta', null, null);
+insert into newtablo (name, email, birthday) values ('Aliza', 'ayashnov9@google.co.jp', null);
+insert into newtablo (name, email, birthday) values ('Ardis', 'aautriea@xrea.com', '1965-06-22');
+insert into newtablo (name, email, birthday) values ('Belinda', null, null);
+insert into newtablo (name, email, birthday) values ('Herculie', 'htenauntc@dagondesign.com', '2015-12-06');
+insert into newtablo (name, email, birthday) values ('Sileas', 'shaslehurstd@virginia.edu', '1951-08-11');
+insert into newtablo (name, email, birthday) values ('Mabel', 'mwetheye@seattletimes.com', null);
+insert into newtablo (name, email, birthday) values ('Jessy', 'jbehnenf@wufoo.com', '1950-09-05');
+insert into newtablo (name, email, birthday) values ('Annabelle', 'ajanceyg@g.co', '1969-01-17');
+insert into newtablo (name, email, birthday) values ('Ives', null, null);
+insert into newtablo (name, email, birthday) values ('Yvon', 'yverheijdeni@virginia.edu', null);
+insert into newtablo (name, email, birthday) values ('Aurore', 'akonerdingj@wsj.com', '1950-05-27');
+insert into newtablo (name, email, birthday) values ('Rois', 'rlucusk@yelp.com', '1958-10-19');
+insert into newtablo (name, email, birthday) values ('Milly', 'mbrocktonl@usda.gov', null);
+insert into newtablo (name, email, birthday) values ('Marc', 'mtwopennym@boston.com', '1962-06-04');
+insert into newtablo (name, email, birthday) values ('Daryl', 'ddedmamn@booking.com', '1942-06-14');
+insert into newtablo (name, email, birthday) values ('Roderich', 'rbrunoo@springer.com', null);
+insert into newtablo (name, email, birthday) values ('Querida', 'qgalwayp@nps.gov', null);
+insert into newtablo (name, email, birthday) values ('Kati', null, '1938-10-14');
+insert into newtablo (name, email, birthday) values ('Meghan', 'mshrubshallr@eepurl.com', null);
+insert into newtablo (name, email, birthday) values ('Courtenay', 'cgregoracis@squidoo.com', '2002-09-27');
+insert into newtablo (name, email, birthday) values ('Spenser', 'spindert@yale.edu', '1914-12-25');
+insert into newtablo (name, email, birthday) values ('Salomon', 'scorgenvinu@oaic.gov.au', '2019-02-23');
+insert into newtablo (name, email, birthday) values ('Carmela', 'coakdenv@europa.eu', '1977-03-19');
+insert into newtablo (name, email, birthday) values ('Adolphe', 'akillfordw@walmart.com', '1943-01-19');
+insert into newtablo (name, email, birthday) values ('Tessy', 'tcolcloughx@networkadvertising.org', null);
+insert into newtablo (name, email, birthday) values ('Margeaux', 'mporretty@twitpic.com', '1998-10-17');
+insert into newtablo (name, email, birthday) values ('Pace', 'plindenblattz@ftc.gov', null);
+insert into newtablo (name, email, birthday) values ('Rurik', 'rrounsefull10@theguardian.com', '1918-02-14');
+insert into newtablo (name, email, birthday) values ('Carly', 'cpenchen11@uol.com.br', null);
+insert into newtablo (name, email, birthday) values ('Hewitt', 'hstrooband12@globo.com', '2019-12-20');
+insert into newtablo (name, email, birthday) values ('Peyter', null, '1964-09-07');
+insert into newtablo (name, email, birthday) values ('Mabel', 'mshears14@usatoday.com', '2007-12-23');
+insert into newtablo (name, email, birthday) values ('Cyrus', 'cdumper15@netvibes.com', '1916-03-03');
+insert into newtablo (name, email, birthday) values ('Theodore', null, '2004-08-30');
+insert into newtablo (name, email, birthday) values ('Arlena', null, '1967-04-13');
+insert into newtablo (name, email, birthday) values ('Charlotta', 'cmercey18@ebay.co.uk', '1963-03-10');
+insert into newtablo (name, email, birthday) values ('Wilton', 'wduckit19@jiathis.com', '1943-01-28');
+insert into newtablo (name, email, birthday) values ('Lettie', 'lryles1a@miitbeian.gov.cn', '2019-09-21');
+insert into newtablo (name, email, birthday) values ('Giulio', 'gpopworth1b@myspace.com', '1984-02-14');
+insert into newtablo (name, email, birthday) values ('Waldon', 'wdurrant1c@myspace.com', '1907-10-18');
+insert into newtablo (name, email, birthday) values ('Eal', 'ewellington1d@jugem.jp', null);
+~~~
 
+#### Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+~~~sql
+UPDATE newtablo
+SET name='emre'
+WHERE id=10;
+
+UPDATE newtablo
+SET email='emrehoruzoglu96@gmail.com'
+WHERE name='emre'
+RETURNING * ;
+
+UPDATE newtablo
+SET name='merve'
+WHERE id>50
+RETURNING * ;
+
+UPDATE newtablo
+SET email='[null]'
+WHERE id BETWEEN 10 AND 20
+RETURNING * ;
+
+UPDATE newtablo
+SET birthday='2000-12-01'
+WHERE id IN (5,6,7,8)
+RETURNING * ;
+~~~
+
+#### Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+~~~sql
 
 
 
