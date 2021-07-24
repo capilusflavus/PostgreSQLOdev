@@ -9,11 +9,9 @@
 <a href='#Ödev 8'>Ödev 8</a><br>
 <a href='#Ödev 9'>Ödev 9</a><br>
 <a href='#Ödev 10'>Ödev 10</a><br>
-
-
-
-
-
+<a href='#Ödev 11'>Ödev 11</a><br>
+<a href='#Ödev 12'>Ödev 12</a><br>
+<a href='#psql'>PSQL ve Uygulama </a><br>
 
 
 ## <p id = 'Ödev 1' > Ödev 1 </p> 
@@ -352,6 +350,30 @@ INNER JOIN customer ON rental.customer_id=customer.customer_id;
 
 #### City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz LEFT JOIN sorgusunu yazınız.
 ~~~sql
+SELECT city,country FROM city
+LEFT JOIN country ON city.country_id=country.country_id;
+~~~
+
+#### Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
+~~~sql
+SELECT payment_id,first_name,last_name From customer
+RIGHT JOIN payment ON customer.customer_id=payment.customer_id;
+~~~
+
+#### Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+~~~sql
+SELECT rental_id,first_name,last_name FROM customer
+FULL JOIN rental ON customer.customer_id=rental.customer_id;
+~~~
+
+##  <p id = 'Ödev 11' > Ödev 11 </p>
+
+#### Actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+~~~sql
+
+
+
+
 
 
 
