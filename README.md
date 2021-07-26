@@ -11,7 +11,7 @@
 <a href='#Ödev 10'>Ödev 10</a><br>
 <a href='#Ödev 11'>Ödev 11</a><br>
 <a href='#Ödev 12'>Ödev 12</a><br>
-<a href='#psql'>PSQL ve Uygulama </a><br>
+<a href='#psql'>PSQL GENEL TEKRAR </a><br>
 
 
 ## <p id = 'Ödev 1' > Ödev 1 </p> 
@@ -503,6 +503,29 @@ FROM customer c
 JOIN payment p
 ON ( p.customer_id = c.customer_id )
 WHERE amount = ( SELECT MAX(amount) from payment );
+~~~
+
+# <p id = 'psql1' > PSQL GENEL TEKRAR </p> 
+## PSQL
+
+### film tablosundan 'K' karakteri ile başlayan en uzun ve replacenet_cost u en düşük 4 filmi sıralayınız.
+
+~~~sql
+SELECT  title,replacement_cost FROM film
+WHERE title LIKE 'K%'
+ORDER BY replacement_cost,title desc
+LIMIT 4
+~~~
+
+### film tablosunda içerisinden en fazla sayıda film bulunduran rating kategorisi hangisidir?
+
+~~~sql
+
+SELECT rating,COUNT(*) FROM film
+GROUP BY rating
+ORDER BY COUNT(*) DESC
+LIMIT 1
+
 ~~~
 
 
